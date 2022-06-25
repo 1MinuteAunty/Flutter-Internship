@@ -27,15 +27,37 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Day 4',
+      title: 'Day 5',
       home: Scaffold(
           //App Bar with orange color
           appBar: AppBar(
-            title: Text("Day 4 Friday"),
+            title: Text("INTERNSHIP"),
             backgroundColor: Colors.orange,
+            actions: [
+              MaterialButton(
+                  child: Icon(Icons.people_alt),
+                  onPressed: () {
+                    print('User Icon Pressed');
+                  }),
+              MaterialButton(
+                  child: Icon(Icons.shopping_cart),
+                  onPressed: () {
+                    print('Cart Icon Pressed');
+                  })
+            ],
+          ),
+          //Create FloatingActionButton
+          floatingActionButton: FloatingActionButton(
+            child: Icon(
+              Icons.add,
+              color: Colors.orange,
+            ),
+            onPressed: () {
+              print('floating action button clicked');
+            },
           ),
 
-          //Drawer Menu
+          //Create a Drawer Menu
           drawer: Drawer(
             backgroundColor: Colors.orange.shade100,
             child: Column(
